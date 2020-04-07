@@ -16,7 +16,8 @@ def on_message(client, user_data, message):
 client = mqtt.Client()
 
 # connect with broker
-client.connect("localhost", 1883, 60)
+client.connect("test.mosquitto.org", 1883, 60)
+#client.connect("localhost", 1883, 60)
 
 # specify functions for on_connect and on_message
 client.on_connect = on_connect

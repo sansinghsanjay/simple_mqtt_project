@@ -5,7 +5,8 @@ import paho.mqtt.client as mqtt
 client = mqtt.Client()
 
 # connect client with broker
-client.connect("localhost", 1883, 60)
+client.connect("test.mosquitto.org", 1883, 60)
+#client.connect("localhost", 1883, 60)
 
 # publish a message
 choice = ""
