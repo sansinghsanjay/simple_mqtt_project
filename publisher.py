@@ -8,7 +8,12 @@ client = mqtt.Client()
 client.connect("localhost", 1883, 60)
 
 # publish a message
-client.publish("topic/string", "This is a testing message...")
+choice = ""
+while(choice != "q"):
+	message = str(raw_input("Enter message to publish: "))
+	client.publish("topic/string", message)
+	choice = str(raw_input("Enter 'q' to quit: "))
+	print("")
 
 # disconnect client
 client.disconnect()
